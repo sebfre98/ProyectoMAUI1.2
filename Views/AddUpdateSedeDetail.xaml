@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteDemo.Views.AddUpdateSedeDetail"
+             Title="Agregar / Actualizar Sede">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="SlateBlue" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="10" Spacing="15">
+        <VerticalStackLayout>
+            <Label Text="Nombre Sede"  />
+            <Entry Text="{Binding SedeDetail.NomSede}" TextTransform="Uppercase" Placeholder="Sede" />
+            <BoxView HeightRequest="0.8" Color="Gray" />
+        </VerticalStackLayout>
+        <Button Text="Guardar" TextColor="WhiteSmoke" BackgroundColor="MidnightBlue" Command="{Binding AddUpdateSedeCommand}"/>
+    </StackLayout>
+</ContentPage>
